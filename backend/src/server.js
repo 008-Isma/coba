@@ -1,13 +1,11 @@
-// const app = require('./app');
+const express = require('express');
 
-// const port = 3000;
+const app = express();
+const port = 3000;
 
-// app.listen(port, () => {
-//   console.log(`Server berjalan di http://localhost:${port}`);
-// });
-const app = require('./app');
-
-const port = process.env.PORT || 3000;
+app.get('/', (_req, res) => {
+  res.send('Server Express aktif');
+});
 
 app.listen(port, () => {
   console.log(`Server berjalan di http://localhost:${port}`);
